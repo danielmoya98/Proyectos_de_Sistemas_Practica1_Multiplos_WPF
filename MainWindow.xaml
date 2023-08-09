@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyectos_de_Sistemas_Practica1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow"  AllowsTransparency="True"  Height="350" Width="525" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent" ResizeMode="NoResize">
+   
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Estilos/TextboxRedondo.xaml"/>
+                <ResourceDictionary Source="/Estilos/BotonRedondo.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Border CornerRadius="25" Background="Bisque" >
         
-    </Grid>
-</Window>
+        <Grid Height="auto" Width="auto" >
+            
+            <Label Content="Multiplos" FontStyle="Italic" FontWeight="Bold" FontSize="30" Margin="20 35"> </Label>
+            <Label Content="Dinamico" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="410 50 0 0"> </Label>
+            <CheckBox  Name="CheckBox_Dinamico" IsChecked="True" Height="15" Width="15" Margin="285 -225 0 0"> </CheckBox>
+
+            
+            
+            <Label Content="Ingrese el rango de numeros" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="20 90"> </Label>
+            <Label Content="Numeros multiplos de la longitud" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="20 160"> </Label>
+            <Label Content="Longitud" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="225 90"> </Label>
+            <TextBox Style="{StaticResource Redondo}" Name="boxUno" Height="25" Width="25" HorizontalAlignment="Left" Margin="25 -90 0 0 " > </TextBox>
+            <TextBox  Style="{StaticResource Redondo}" Height="100" Width="425" HorizontalAlignment="Left" Margin="25 115 0 0 " > </TextBox>
+            <Label Content="y" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="50 115"> </Label>
+            <TextBox Style="{StaticResource Redondo}" Name="boxDos" Height="25" Width="25" HorizontalAlignment="Left" Margin="65 -90 0 0 " > </TextBox>
+            <TextBox Name="longitud" Height="25" Width="50" Style="{StaticResource Redondo}" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left"  FontSize="10" Margin="230 -90 0 0 " > </TextBox>
+            <Button Style="{StaticResource Bredondo}" Height="25" Width="50" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Content="Calcular" Click="ButtonBase_OnClick" FontSize="10" Margin="400 -90 0 0 " > </Button>
+            <Button  Style="{StaticResource Bredondo}" Click="ButtonBase1_OnClick" Height="25" Width="25" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Content="X" FontSize="10" Margin="480 -300 0 0 " > </Button>
+
+            <Label Content="Resultado de la suma" FontStyle="Italic" FontWeight="Bold" FontSize="10" Margin="20 280 0 0 "> </Label>
+            <TextBox  Style="{StaticResource Redondo}" Name="suma" Height="15" Width="320" HorizontalAlignment="Left" Margin="130 235 0 0 " > </TextBox>
+
+
+            <TextBox Style="{StaticResource Redondo}" Name="conteo" Height="100" Width="425" HorizontalAlignment="Left"  Margin="25 115 0 0 " > </TextBox>
+            
+        </Grid>
+    </Border>
+   </Window>
